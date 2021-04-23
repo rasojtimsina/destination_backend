@@ -1,6 +1,6 @@
 const db = [
   {
-    UID: "1234567",
+    uid: "1234567",
     name: "Eiffel tower",
     location: "Paris",
     photo:
@@ -8,7 +8,7 @@ const db = [
     description: "Romantic place",
   },
   {
-    UID: "7654321",
+    uid: "7654321",
     name: "Mount Everest",
     location: "Nepal",
     photo: "https://cdn.britannica.com/17/83817-050-67C814CD/Mount-Everest.jpg",

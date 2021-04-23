@@ -1,5 +1,8 @@
 const { default: axios } = require("axios");
 
+if (!process.env.PORT) {
+  require("../Secrets");
+}
 function getUID() {
   //generate seven random number
 
@@ -13,7 +16,7 @@ function getUID() {
 }
 
 async function getPhotoFromUnsplash(name) {
-  const URL = `https://api.unsplash.com/search/photos?client_id=UaCubexKqkiI9BiOILocuHdArGSPLiBG78abr9F_hcM&query=${name}`;
+  const URL = `https://api.unsplash.com/search/photos?client_id=${process.env.UNPLASH_API_KEY}&query=${name}`;
 
   const res = await axios.get(URL);
   const photos = res.data.results;
